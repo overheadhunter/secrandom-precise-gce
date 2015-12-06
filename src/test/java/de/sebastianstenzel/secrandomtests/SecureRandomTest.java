@@ -7,9 +7,10 @@ import org.junit.Test;
 
 public class SecureRandomTest {
 
-	@Test(timeout = 1000)
+	@Test(timeout = 10000)
 	public void testSecureRandomNumberGeneration() throws NoSuchAlgorithmException {
-		byte[] bytes = new byte[10000];
+		// 1000 secure random bytes in 10 seconds
+		byte[] bytes = new byte[1000];
 		SecureRandom.getInstanceStrong().nextBytes(bytes);
 	}
 
